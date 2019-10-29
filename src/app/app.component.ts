@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MessageService } from './message/message.service';
+import { ThreadService } from './thread/thread.service';
+import { UserService } from './user/user.service';
+import { ChatExampleData } from './data/chat-example';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chatbot';
+
+  constructor( public messageService: MessageService,
+               public threadservice: ThreadService,
+               public userService: UserService
+
+  ) {
+    ChatExampleData.init(messageService, threadservice, userService);
+  }
 }
