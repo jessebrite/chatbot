@@ -33,6 +33,12 @@ const initialMessages: Array<Message> = [
     thread: tLadycap
   }),
   new Message({
+    author: me,
+    sentAt: moment().subtract(45, 'minutes').toDate(),
+    text: 'YOu know damn right!.',
+    thread: tLadycap
+  }),
+  new Message({
     author: echo,
     sentAt: moment().subtract(1, 'minutes').toDate(),
     text: `I\'ll echo whatever you send me`,
